@@ -190,25 +190,28 @@
 		"searchPlaceholder": "Search verifiers..."
 	},
 	"pageSettings": {
-		"addPasskey": "Add passkey",
-		"addPasskeyTitle": "Click to Add passkey",
+		"addPasskey": "Add new passkey",
+		"addPasskeyShort": "Add",
+		"addPasskeyTitle": "Click to add a new passkey",
 		"appVersion": {
-			"descriptionLatestVersion": "You are currently using the latest $t(common.walletName) version {{react_app_version}}",
-			"descriptionOldVersion": "You are currently using wwWallet version {{react_app_version}}.<br/> <strong>A new version is available.</strong> Please <reloadButton>refresh</reloadButton> to update!"
+			"descriptionLatestVersion": "You are currently using the latest $t(common.walletName) version {{react_app_version}}.",
+			"descriptionOldVersion": "You are currently using wwWallet version {{react_app_version}}.<br/>A new version is available. Please <reloadButton>refresh</reloadButton> to update!"
 		},
 		"deleteAccount": {
 			"buttonText": "Delete your account",
 			"deleteButtonTitleLocked": "You cannot delete your account while locked",
 			"description": "Once you delete your account, there is no going back. Please be certain.",
-			"message": "Are you sure you want to delete <strong>your Account</strong> ?",
+			"message": "Are you sure you want to delete your account? This action is permanent.",
 			"title": "Delete account"
 		},
 		"deletePasskeyButtonTitleLocked": "You cannot add passkey while locked",
 		"description": "View account information and manage passkeys",
 		"lockPasskeyManagement": "Lock passkey management",
-		"lockPasskeyManagementTitle": "Click to Lock passkey management",
-		"noOtherPasskeys": "There are no other passkeys in this account.",
+		"lockPasskeyManagementTitle": "Click to lock passkey management",
+		"noOtherPasskeysTitle": "You don’t have any other passkeys in this account.",
+		"noOtherPasskeysDescription": "Passkeys are a secure authentication method by trusted parties. Connect more passkeys in case you lose one.",
 		"passkeyItem": {
+			"title": "Passkey",
 			"canEncrypt": "Can Encrypt",
 			"canEncryptNo": "No",
 			"canEncryptYes": "Yes",
@@ -218,7 +221,7 @@
 			"deleteButtonTitleLocked": "You cannot delete passkey while locked",
 			"deleteButtonTitleUnlocked": "Click to delete passkey {{passkeyLabel}}",
 			"lastUsed": "Last Used",
-			"messageDeletePasskey": "Are you sure you want to delete <strong>{{nickname}}</strong> passkey?",
+			"messageDeletePasskey": "Are you sure you want to delete {{nickname}} passkey?",
 			"needsPrfUpgrade": "Needs upgrade",
 			"nickname": "Nickname",
 			"nicknameInput": "New nickname",
@@ -243,13 +246,15 @@
 			"successMessage": "Saved"
 		},
 		"title": {
-			"appVersion": "App Version",
-			"confirmDeletePopup": "Are You Sure?",
+			"preferences": "Preferences",
+			"appVersion": "App version",
+			"confirmDeleteAccountPopup": "Delete account",
+			"confirmDeleteCredentialPopup": "Delete credential",
 			"language": "Language",
-			"loggedInPasskey": "Logged in Passkey",
-			"manageAcount": "Manage Account",
-			"manageOtherPasskeys": "Manage other Passkeys",
-			"rememberIssuer": "Remember Issuer"
+			"loggedInPasskey": "Logged in passkey",
+			"manageAcount": "Manage account",
+			"manageOtherPasskeys": "Manage passkeys",
+			"rememberIssuer": "Remember issuer"
 		},
 		"unlockPasskeyManagement": "Unlock management",
 		"unlockPasskeyManagementTitle": "Click to Unlock management",
@@ -260,9 +265,9 @@
 			"title": "Enter password"
 		},
 		"upgradePrfKey": {
-			"description": "Please authenticate with the passkey \"{{passkeyLabel}}\"...",
-			"error": "<p>Something went wrong, please try again.</p><p>Please note that you need to authenticate with the passkey \"{{passkeyLabel}}\".</p>",
-			"title": "Upgrading passkey encryption key"
+			"description": "Please authenticate with the passkey <strong>{{passkeyLabel}}</strong>.",
+			"error": "<p>Something went wrong, please try again.</p><p>Please note that you need to authenticate with the passkey <strong>{{passkeyLabel}}</strong>.</p>",
+			"title": "Upgrade your passkey<br/>encryption key"
 		}
 	},
 	"pwaInstallPrompt": {

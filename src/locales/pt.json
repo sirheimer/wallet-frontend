@@ -189,23 +189,23 @@
 		"searchPlaceholder": "Procurar verifiers..."
 	},
 	"pageSettings": {
-		"addPasskey": "Adicionar chave de acesso",
-		"addPasskeyTitle": "Clique para adicionar chave de acesso",
+		"addPasskey": "Adicionar nova chave de acesso",
+		"addPasskeyTitle": "Clique para adicionar uma nova chave de acesso",
 		"appVersion": {
-			"descriptionLatestVersion": "Está, neste momento, a usar a versão mais recente ({{react_app_version}}) da $t(common.walletName).",
-			"descriptionOldVersion": "Está, neste momento, a usar a versão {{react_app_version}} da wwWallet.<br/> <strong>Está disponível uma nova versão.</strong> Por favor, <reloadButton>recarregue</reloadButton> para atualizar!"
+			"descriptionLatestVersion": "Está atualmente a usar a versão mais recente do $t(common.walletName) {{react_app_version}}.",
+			"descriptionOldVersion": "Está atualmente a usar a versão wwWallet {{react_app_version}}.<br/>Uma nova versão está disponível. Por favor <reloadButton>atualize</reloadButton> para atualizar!"
 		},
 		"deleteAccount": {
 			"buttonText": "Elimine a sua conta",
 			"deleteButtonTitleLocked": "Não é possível apagar a conta com gestão bloqueada",
 			"description": "Eliminar a conta é um processo irreversível. Por favor, assegure-se de que quer prosseguir.",
-			"message": "Tem a certeza que quer eliminar <strong>a sua conta</strong>?",
+			"message": "Tem a certeza que deseja eliminar a sua conta? Esta ação é permanente.",
 			"title": "Eliminar conta"
 		},
 		"deletePasskeyButtonTitleLocked": "Não é possível adicionar chave de acesso com gestão bloqueada.",
 		"description": "Consulte informação da conta e gira chaves de acesso",
 		"lockPasskeyManagement": "Bloquear gestão",
-		"lockPasskeyManagementTitle": "Clique para bloquear gestão de chaves de acesso",
+		"lockPasskeyManagementTitle": "Clique para bloquear a gestão de chaves de acesso",
 		"noOtherPasskeys": "Não há mais chaves de acesso nesta conta.",
 		"passkeyItem": {
 			"canEncrypt": "Pode encriptar",
@@ -217,7 +217,7 @@
 			"deleteButtonTitleLocked": "Não é possível eliminar chave de acesso com gestão bloqueada.",
 			"deleteButtonTitleUnlocked": "Clique para eliminar a chave de acesso {{passkeyLabel}}",
 			"lastUsed": "Última utilização",
-			"messageDeletePasskey": "Tem a certeza que deseja eliminar a chave de acesso <strong>{{nickname}}</strong>?",
+			"messageDeletePasskey": "Tem a certeza que deseja eliminar a chave de acesso {{nickname}}?",
 			"needsPrfUpgrade": "Atualização necessária",
 			"nickname": "Nome",
 			"nicknameInput": "Novo nome",
@@ -228,7 +228,8 @@
 			"renameAriaLabel": "Renomear chave de acesso {{passkeyLabel}}",
 			"renameButtonTitleLocked": "Não é possível alterar chave de acesso com gestão bloqueada.",
 			"saveChangesAriaLabel": "Guardar alterações para chave de acesso {{passkeyLabel}}",
-			"unnamed": "Chave de acesso sem nome"
+			"unnamed": "Chave de acesso sem nome",
+			"title": "Chave de acesso"
 		},
 		"rememberIssuer": {
 			"description": "Defina a duração de acesso aos issuers sem ser necessário nova autenticação (de acordo com a política do issuer)",
@@ -243,12 +244,13 @@
 		},
 		"title": {
 			"appVersion": "Versão da aplicação",
-			"confirmDeletePopup": "Tem a certeza?",
+			"confirmDeletePopup": "Eliminar conta",
 			"language": "Idioma",
-			"loggedInPasskey": "Chave de acesso autenticada",
+			"loggedInPasskey": "Chave de acesso com sessão iniciada",
 			"manageAcount": "Gerir conta",
 			"manageOtherPasskeys": "Gerir outras chaves de acesso",
-			"rememberIssuer": "Relembrar issuer"
+			"rememberIssuer": "Lembrar issuer",
+			"preferences": "Preferências"
 		},
 		"unlockPasskeyManagement": "Desbloquear gestão",
 		"unlockPasskeyManagementTitle": "Clique para desbloquear gestão",
@@ -259,10 +261,12 @@
 			"title": "Introduzir Palavra-passe"
 		},
 		"upgradePrfKey": {
-			"description": "Por favor, autentique-se com a chave de acesso \"{{passkeyLabel}}\"...",
-			"error": "<p>Algo correu mal. Por favor, tente novamente.</p><p>Por favor, lembre-se que precisa de se autenticar com a chave de acesso \"{{passkeyLabel}}\".</p>",
-			"title": "A atualizar a chave de encriptação da chave de acesso"
-		}
+			"description": "Por favor, autentique-se com a chave de acesso <strong>{{passkeyLabel}}</strong>.",
+			"error": "<p>Algo correu mal, por favor tente novamente.</p><p>Por favor note que precisa de se autenticar com a chave de acesso <strong>{{passkeyLabel}}</strong>.</p>",
+			"title": "Atualize a sua chave de<br/>encriptação da chave de acesso"
+		},
+		"noOtherPasskeysTitle": "Não tem outras chaves de acesso nesta conta.",
+		"noOtherPasskeysDescription": "As chaves de acesso são um método de autenticação seguro por entidades confiáveis. Conecte mais chaves de acesso caso perca uma."
 	},
 	"pwaInstallPrompt": {
 		"button": {
