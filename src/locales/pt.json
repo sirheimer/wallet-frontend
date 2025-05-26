@@ -41,7 +41,10 @@
 		"save": "Guardar",
 		"submit": "Submeter",
 		"tryAgain": "Tentar novamente",
-		"walletName": "wwWallet"
+		"walletName": "wwWallet",
+		"navItemFeedback": "Feedback",
+		"navItemHelp": "Ajuda",
+		"navItemDocs": "Documentação"
 	},
 	"expiredRibbon": {
 		"expired": "Expirada"
@@ -306,7 +309,7 @@
 	},
 	"sidebar": {
 		"navItemLogout": "Sair",
-		"poweredBy": "Desenvolvido por <docLinkWalletGithub>wwWallet</docLinkWalletGithub>",
+		"poweredBy": "Desenvolvido por <docLinkWalletGithub><docBtn>wwWallet</docBtn></docLinkWalletGithub>",
 		"poweredByAriaLabel": "Repositório GitHub da wwWallet"
 	},
 	"tourGuide": {

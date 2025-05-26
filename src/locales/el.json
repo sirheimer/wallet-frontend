@@ -1,6 +1,7 @@
 {
 	"ConnectionStatusIcon": {
 		"qualityLabels": {
+			"connecting": "Σύνδεση...",
 			"excellent": "Άριστη",
 			"fair": "Μέτρια",
 			"good": "Καλή",
@@ -27,6 +28,9 @@
 		"navItemSendCredentials": "Αποστολή Πιστοποιητικών",
 		"navItemSendCredentialsSimple": "Αποστολή",
 		"navItemSettings": "Ρυθμίσεις",
+		"navItemFeedback": "Σχόλια",
+		"navItemHelp": "Βοήθεια",
+		"navItemDocs": "Έγγραφα",
 		"next": "Επόμενο",
 		"offline": "Εκτός σύνδεσης",
 		"offlineTitle": "Είστε εκτός σύνδεσης. Δεν έχετε πρόσβαση εδώ αυτή τη στιγμή.",
@@ -306,7 +310,7 @@
 	},
 	"sidebar": {
 		"navItemLogout": "Αποσύνδεση",
-		"poweredBy": "Powered by <docLinkWalletGithub>wwWallet</docLinkWalletGithub>",
+		"poweredBy": "Powered by <docLinkWalletGithub><docBtn>wwWallet</docBtn></docLinkWalletGithub>",
 		"poweredByAriaLabel": "GitHub repository του wwWallet"
 	},
 	"tourGuide": {

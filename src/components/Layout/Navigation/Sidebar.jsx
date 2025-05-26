@@ -1,30 +1,40 @@
 import React, { useContext } from 'react';
-import { AiOutlineLogout } from "react-icons/ai";
-import { FaWallet, FaUserCircle } from "react-icons/fa";
-import { IoIosTime, IoIosAddCircle, IoIosSend, IoMdSettings } from "react-icons/io";
 import { useLocation, useNavigate } from 'react-router-dom';
-import useScreenType from '../../../hooks/useScreenType';
-import Logo from '../../Logo/Logo';
 import { Trans, useTranslation } from 'react-i18next';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faBell } from '@fortawesome/pro-solid-svg-icons';
+import { faArrowRightFromBracket, faCirclePlus, faGear, faHistory, faKey, faSend, faUserCircle } from '@fortawesome/pro-regular-svg-icons';
+
+import useScreenType from '@/hooks/useScreenType';
+
 import StatusContext from '@/context/StatusContext';
 import SessionContext from '@/context/SessionContext';
-import { MdNotifications } from "react-icons/md";
+
+import Logo from '@/components/Logo/Logo';
+import Button from '@/components/Buttons/Button';
 import ConnectionStatusIcon from './ConnectionStatusIcon';
 
-const NavItem = ({ icon: Icon, id, label, handleNavigate, location, path, alias, notificationIcon, className = '' }) => {
+const NavItem = ({ icon, id, label, handleNavigate, location, path, alias, notificationIcon, className = '' }) => {
 	const isActive = location.pathname === path || location.pathname === alias;
 	return (
 		<button
 			id={`sidebar-item-${id}`}
 			onClick={() => handleNavigate(path)}
-			className={`cursor-pointer flex items-center justify-between space-x-2 mb-4 p-2 rounded-r-xl w-full ${isActive ? 'bg-white text-primary' : 'nav-item-animate-hover'} ${className}`}
+			className={`
+				cursor-pointer flex items-center justify-between space-x-2 mb-1 py-2.5 px-3 rounded-lg w-full font-medium
+				text-c-lm-gray-900 dark:text-c-dm-gray-100 ${isActive ? 'bg-c-lm-gray-300 dark:bg-c-dm-gray-700' : 'bg-transparent hover:bg-c-lm-gray-300 dark:hover:bg-c-dm-gray-700'} 
+				transition-all duration-150
+				${className}
+			`}
 		>
-			<div className="flex items-center space-x-2 text-left">
-				{Icon && <Icon className="shrink-0" size={30} />}
+			<div className="flex items-center text-left">
+				{icon && <FontAwesomeIcon icon={icon} className="text-md mr-3" fixedWidth />}
+
 				<span>
 					{label}
 				</span>
 			</div>
+
 			{notificationIcon && (
 				<div className="flex items-center">
 					{notificationIcon}
@@ -60,53 +70,45 @@ const Sidebar = ({ isOpen, toggle }) => {
 
 	return (
 		<div
-			className={`${isOpen && screenType !== 'desktop'
-				? 'w-full flex flex-col justify-between fixed h-dvh z-30 bg-primary dark:bg-primary-hover text-white p-4 pb-24 md:pb-0 overflow-y-auto'
-				: 'hidden w-64 md:flex md:flex-col justify-between sticky top-0 bg-primary dark:bg-primary-hover text-white h-dvh py-8 px-7 overflow-y-auto'
-				}`}
+			className={
+				isOpen && screenType !== 'desktop' ? 
+					'w-full flex flex-col justify-between fixed h-dvh z-30 bg-primary dark:bg-primary-hover text-white p-4 pb-24 md:pb-0 overflow-y-auto'
+				: 
+					'hidden w-64 md:flex md:flex-col justify-between sticky top-0 bg-c-lm-gray-200 dark:bg-c-dm-gray-900 dark:border-r dark:border-c-dm-gray-700 text-c-lm-gray-900 dark:text-c-dm-gray-100 h-dvh px-4 overflow-y-auto'
+			}
 		>
 			{/* Header and Nav */}
 			<div style={{ display: 'flex', flexDirection: 'column' }} className="flex flex-col space-between">
 				<div className="md:hidden flex items-center justify-between mb-4">
 					<div className='flex items-center'>
-						<Logo type='white' aClassName='mr-2' imgClassName='w-10 h-auto' />
+						<Logo aClassName='mr-2' imgClassName='w-8 h-8' />
+
 						<a href={('/')}
-							className="text-white text-xl font-bold cursor-pointer"
+							className="text-white text-xl font-semibold cursor-pointer"
 						>
 							{t('common.walletName')}
 						</a>
 					</div>
 				</div>
+
 				<div>
-					<div className="hidden md:flex md:gap-2 justify-between items-center">
-						<Logo type='white' aClassName='mb-2 mr-2 w-5/12' imgClassName='object-contain' />
-						<a href={('/')}
-							className="text-white text-xl font-bold cursor-pointer w-7/12"
+					<div className="hidden md:flex justify-center items-center my-5">
+						<a 
+						href={('/')}
+						className="flex items-center justify-center"
 						>
-							{t('common.walletName')}
+							<Logo 
+							imgClassName='h-8 w-8 object-contain' 
+							/>
+
+							<h4 className='text-center ml-3 text-c-lm-gray-900 dark:text-c-dm-gray-100 font-semibold' style={{ fontSize: '1.5rem', lineHeight: '1.75rem' }}>wwWallet</h4>
 						</a>
 					</div>
 
-					<hr className="my-2 border-t border-white/20" />
+					<hr className="mb-4 border-t border-c-lm-gray-400 dark:border-c-dm-gray-700 -mx-4" />
 
 					{/* User */}
 					<ul>
-						<div className='flex items-center space-x-2 mb-2 p-2 rounded-r-xl'>
-							<div className='pr-2 border-r border-white/20'>
-								<ConnectionStatusIcon size='small' />
-							</div>
-
-							<FaUserCircle className="shrink-0" size={20} title={displayName || username} />
-							<span
-								className="text-overflow-ellipsis text-sm overflow-hidden whitespace-nowrap"
-								title={displayName || username}
-							>
-								{displayName || username}
-							</span>
-						</div>
-
-						<hr className="my-2 border-t border-white/20" />
-
 						{/* Nav Menu */}
 						<NavItem
 							id="credentials"
@@ -114,7 +116,7 @@ const Sidebar = ({ isOpen, toggle }) => {
 							alias="/cb"
 							location={location}
 							handleNavigate={handleNavigate}
-							icon={FaWallet}
+							icon={faKey}
 							label={t("common.navItemCredentials")}
 							className="step-2 hidden md:block"
 						/>
@@ -124,7 +126,7 @@ const Sidebar = ({ isOpen, toggle }) => {
 							path="/add"
 							location={location}
 							handleNavigate={handleNavigate}
-							icon={IoIosAddCircle}
+							icon={faCirclePlus}
 							label={t("common.navItemAddCredentials")}
 							className="step-3 hidden md:block"
 						/>
@@ -134,7 +136,7 @@ const Sidebar = ({ isOpen, toggle }) => {
 							path="/send"
 							location={location}
 							handleNavigate={handleNavigate}
-							icon={IoIosSend}
+							icon={faSend}
 							label={t("common.navItemSendCredentials")}
 							className="step-5 hidden md:block"
 						/>
@@ -144,56 +146,86 @@ const Sidebar = ({ isOpen, toggle }) => {
 							path="/history"
 							location={location}
 							handleNavigate={handleNavigate}
-							icon={IoIosTime}
+							icon={faHistory}
 							label={t("common.navItemHistory")}
 							className="step-6"
 						/>
+
+						<hr className="my-2 border-t border-c-lm-gray-400 dark:border-c-dm-gray-700 mx-3" />
 
 						<NavItem
 							id="settings"
 							path="/settings"
 							location={location}
 							handleNavigate={handleNavigate}
-							icon={IoMdSettings}
+							icon={faGear}
 							label={t("common.navItemSettings")}
 							notificationIcon={
 								updateAvailable && (
-									<MdNotifications size={22} className="text-green-500" />
+									<FontAwesomeIcon icon={faBell} className="text-c-lm-red dark:text-c-dm-red" />
 								)
 							}
 							className="step-7"
 						/>
 
-						<hr className="my-2 border-t border-white/20" />
-
 						<button
 							id="sidebar-item-logout"
 							onClick={handleLogout}
-							className={`cursor-pointer flex items-center space-x-2 mb-4 p-2 rounded-r-xl nav-item-animate-hover w-full`}
+							className={`
+								cursor-pointer flex items-center px-3 py-2.5 rounded-lg w-full
+								text-c-lm-gray-900 dark:text-c-dm-gray-100 text-md font-medium
+								bg-transparent hover:bg-c-lm-gray-300 dark:hover:bg-c-dm-gray-700
+								transition-all duration-150
+							`}
 						>
-							<AiOutlineLogout size={30} />
+							<FontAwesomeIcon icon={faArrowRightFromBracket} className='text-md mr-3' fixedWidth />
+
 							<span className='text-left'>
 								{t("sidebar.navItemLogout")}
 							</span>
 						</button>
+
 					</ul>
 				</div>
 			</div>
 
-			{/* Powered By */}
-			<div className="text-white text-sm space-x-2 p-2">
-				<Trans
-					i18nKey="sidebar.poweredBy"
-					components={{
-						docLinkWalletGithub: <a
-							href="https://github.com/wwWallet"
-							rel="noreferrer"
-							target='blank_'
-							className="underline"
-							aria-label={t('sidebar.poweredbyAriaLabel')}
-						/>
-					}}
-				/>
+			<div className='mt-8'>
+				<div 
+				className={`
+					flex items-center mb-2 px-3 py-2.5 rounded-lg bg-c-lm-gray-300 dark:bg-c-dm-gray-800 mb-4
+				`}
+				>
+					<FontAwesomeIcon icon={faUserCircle} className="mr-3 text-md" />
+
+					<span
+						className="text-overflow-ellipsis text-md font-medium overflow-hidden whitespace-nowrap"
+						title={displayName || username}
+					>
+						{displayName || username}
+					</span>
+				</div>
+
+				{/* Powered By */}
+				<div className="text-c-lm-gray-700 dark:text-c-dm-gray-300 text-sm text-center mb-6">
+					<Trans
+						i18nKey="sidebar.poweredBy"
+						components={{
+							docLinkWalletGithub: (
+								<a
+									href="https://github.com/wwWallet"
+									rel="noreferrer"
+									target="_blank"
+									aria-label={t('sidebar.poweredbyAriaLabel')}
+								/>
+							),
+							docBtn: (
+								<Button
+									variant="link"
+								/>
+							)
+						}}
+					/>
+				</div>
 			</div>
 		</div>
 	);

@@ -20,14 +20,17 @@
 		"cancel": "Cancel",
 		"continue": "Continue",
 		"delete": "Delete",
-		"navItemAddCredentials": "Add Credentials",
+		"navItemAddCredentials": "Add credentials",
 		"navItemAddCredentialsSimple": "Add",
 		"navItemCredentials": "Credentials",
 		"navItemHistory": "History",
 		"navItemProfile": "Profile",
-		"navItemSendCredentials": "Send Credentials",
+		"navItemSendCredentials": "Send credentials",
 		"navItemSendCredentialsSimple": "Send",
 		"navItemSettings": "Settings",
+		"navItemFeedback": "Feedback",
+		"navItemHelp": "Help",
+		"navItemDocs": "Docs",
 		"next": "Next",
 		"offline": "Offline",
 		"offlineTitle": "You are offline. You don't have access here right now.",
@@ -51,9 +54,9 @@
 		"label": "Language"
 	},
 	"layout": {
-		"messageAllowPermission": "To receive real-time updates of <strong>Credentials, allow notifications permission and reload this page</strong>.",
-		"messageOffline": "You are currently <strong>offline. Some features may not be available.</strong>",
-		"messageResetPermission": "Something <strong>not working properly with the notifications</strong>, please <reloadButton>reload this page</reloadButton>."
+		"messageAllowPermission": "To receive real-time updates of Credentials, <strong>allow notifications permission and reload this page</strong>.",
+		"messageOffline": "<strong>You are currently offline.</strong> Some features may not be available.",
+		"messageResetPermission": "Something is <strong>not working properly with the notifications</strong>, please reload this page."
 	},
 	"loginSignup": {
 		"alreadyHaveAccountQuestion": "Already have an account? ",
@@ -307,7 +310,7 @@
 	},
 	"sidebar": {
 		"navItemLogout": "Logout",
-		"poweredBy": "Powered by <docLinkWalletGithub>wwWallet</docLinkWalletGithub>",
+		"poweredBy": "Powered by <docLinkWalletGithub><docBtn>wwWallet</docBtn></docLinkWalletGithub>",
 		"poweredByAriaLabel": "GitHub repository of wwWallet"
 	},
 	"tourGuide": {
