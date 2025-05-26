@@ -68,6 +68,7 @@
 		"forgetCachedUser": "Κάντε κλικ για να Ξεχάσετε τον Αποθηκευμένο Χρήστη {{name}}",
 		"incorrectCredentialsError": "Λάθος όνομα χρήστη ή κωδικός",
 		"login": "Σύνδεση",
+		"loginInstead": "Συνδεθείτε αντί για αυτό.",
 		"loginAsUser": "Συνδεθείτε ως {{name}}",
 		"loginCache": "Επιλέξτε τον λογαριασμό σας",
 		"loginKeystoreFailed": "Απέτυχε η προσπέλαση του αποθηκευτικού χώρου του wallet, δοκιμάστε ξανά.",
@@ -94,6 +95,7 @@
 		"privateDataConflict": "Μια άλλη συνεδρία για αυτόν τον λογαριασμό διέκοψε την προσπάθεια σύνδεσης, δοκιμάστε ξανά.",
 		"reachedLengthLimit": "Υπερβαίνει το όριο μήκους",
 		"signUp": "Εγγραφή",
+		"signUpHere": "Εγγραφείτε εδώ.",
 		"signUpPasskey": "Εγγραφή με κλειδί πρόσβασης",
 		"signUpSubmit": "Εγγραφή",
 		"signupPasskey": "Εγγραφή με κλειδί πρόσβασης",
@@ -103,8 +105,9 @@
 		"useOtherAccount": "Χρησιμοποιήστε άλλο λογαριασμό",
 		"usernameExistsError": "Απέτυχε η δημιουργία λογαριασμού χρήστη, το όνομα χρήστη υπάρχει ήδη.",
 		"usernameLabel": "Όνομα Χρήστη",
-		"weakPasswordError": "Αδύναμος κωδικός",
-		"welcomeMessage": "Καλώς ήρθατε στο <highlight>$t(common.walletName)</highlight>"
+		"weakPasswordError": "Αδύναμος κωδικός. Ικανοποιήστε τα ακόλουθα κριτήρια:",
+		"welcomeMessage": "Καλώς ήρθατε στο <highlight>$t(common.walletName)</highlight>",
+		"welcomeMessageDescription": "Το cloud-based μη-θεματοφυλακικό ψηφιακό πορτοφόλι ταυτότητας.<br />Με την υποστήριξη του ανοιχτού κώδικα."
 	},
 	"loginState": {
 		"confirm": "Επιβεβαίωση",
