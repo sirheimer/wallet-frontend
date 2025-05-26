@@ -150,14 +150,14 @@
 		"searchPlaceholder": "Procurar credencial..."
 	},
 	"pageCredentials": {
-		"addCardTitle": "Adicionar Nova Credencial",
+		"addCardTitle": "Adicionar nova credencial",
 		"credentialDetailsTitle": "Clique para ver detalhes sobre {{friendlyName}}",
 		"credentialFullScreenTitle": "Clique para ver em tela cheia o {{friendlyName}}",
 		"credentialTitle": "Credencial",
 		"datasetTitle": "Dataset",
 		"delete": "Eliminar credencial",
 		"deletePopupMessage": "Tem a certeza que deseja eliminar a credencial <strong>{{credentialName}}</strong>? Se continuar, <strong>todas as apresentações que incluem esta VC serão removidas do seu histórico.</strong>",
-		"description": "Consulte as suas credenciais",
+		"description": "Veja todas as suas credenciais. Clique numa para ver os detalhes.",
 		"details": {
 			"availableUsages": "Utilizações disponíveis",
 			"description": "Consulte toda a informação sobre a credencial selecionada",
@@ -169,7 +169,9 @@
 		"slideButtonTitleDisable": "Sem credencial {{direction}} disponível",
 		"slideButtonTitleEnable": "Clique para ir para a credencial {{direction}}",
 		"slideNext": "Seguinte",
-		"slidePrevious": "Anterior"
+		"slidePrevious": "Anterior",
+		"addCredential": "Adicionar nova credencial",
+		"searchPlaceholder": "Pesquisar credencial..."
 	},
 	"pageHistory": {
 		"description": "Consulte o histórico de transmissões de credenciais, com informação sobre quando e para que verifiers elas foram enviadas.",

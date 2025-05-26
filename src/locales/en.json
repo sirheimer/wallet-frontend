@@ -143,7 +143,7 @@
 	},
 	"pageAddCredentials": {
 		"description": "Search and choose the credential you want to issue",
-		"noFound": "No matching issuers found.",
+		"noFound": "No matching issuers found with the given search criteria.",
 		"popup": {
 			"message": "If you continue, you will be redirected to <strong>{{issuerName}}</strong> <i>{{issuerDescription}}</i> to issue a <strong>{{credentialName}}</strong> <i>{{credentialDescription}}</i>.",
 			"title": "Selected:"
@@ -151,18 +151,21 @@
 		"searchPlaceholder": "Search credential..."
 	},
 	"pageCredentials": {
-		"addCardTitle": "Add New Credential",
+		"noResults": "No matching credentials found with the given search criteria.",
+		"addCardTitle": "Add new credential",
+		"addCredential": "Add new credential",
+		"searchPlaceholder": "Search credential...",
 		"credentialDetailsTitle": "Click to view details for {{friendlyName}}",
 		"credentialFullScreenTitle": "Click to view fullscreen the {{friendlyName}}",
 		"credentialTitle": "Credential",
 		"datasetTitle": "Dataset",
-		"delete": "Delete Credential",
-		"deletePopupMessage": "Are you sure you want to delete the <strong>{{credentialName}}</strong> credential?<br/> If you delete it, <strong>all the presentations that include this VC will be removed from your history.</strong>",
-		"description": "View all of your credentials",
+		"delete": "Delete credential",
+		"deletePopupMessage": "Are you sure you want to delete the <strong>{{credentialName}}</strong> credential? If you delete it, <strong>all presentations that include this VC will be removed from your history.</strong>",
+		"description": "View all of your credentials. Click one to view the details.",
 		"details": {
 			"availableUsages": "Available Usages",
-			"description": "View all the information about the chosen credential",
-			"expired": "This Credential has been expired"
+			"description": "View all the information about the chosen credential.",
+			"expired": "This credential has been expired."
 		},
 		"presentationsTitle": "Presentations",
 		"slideButtonAriaLabelDisable": "No {{direction}} credential",
@@ -174,7 +177,7 @@
 	},
 	"pageHistory": {
 		"description": "View history of credential transmissions, detailing when and to which verifiers you sent",
-		"noFound": "No presentations found",
+		"noFound": "No history found. As you add and send credentials, they will start to appear here.",
 		"popupTitle": "Presented Credentials",
 		"presentationDetails": {
 			"title": "Presentation Details"
