@@ -14,31 +14,34 @@ const NotFound = () => {
 	};
 
 	return (
-		<section className="bg-gray-100 dark:bg-gray-900">
+		<section className="bg-c-lm-gray-100 dark:bg-c-dm-gray-900">
 			<div className="flex flex-col items-center justify-center px-6 py-8 mx-auto min-h-dvh">
-				<Logo aClassName='mb-6' imgClassName='w-40' />
-				<h1 className="text-xl mb-7 font-bold leading-tight tracking-tight text-gray-900 md:text-2xl text-center dark:text-white">
-					{t('common.walletName')}
-				</h1>
-				<div className="w-full bg-white rounded-lg shadow dark:border md:mt-0 sm:max-w-md xl:p-0 dark:bg-gray-800 dark:border-gray-700">
-					<div className="p-6 space-y-4 md:space-y-6 sm:p-8">
-						<h1 className="text-2xl font-bold leading-tight tracking-tight text-gray-900 md:text-4xl text-center dark:text-white">
-							{t('notFound.title')}
-						</h1>
+				<div className='flex items-center justify-center'>
+					<Logo 
+					imgClassName='h-10 w-10' 
+					/>
 
-						<p className='text-center'>
-							{t('notFound.message')}
-						</p>
-						<Button
-							id="navigate-home"
-							onClick={handleBackToHome}
-							variant="secondary"
-							additionalClassName='w-full'
-						>
-							{t('notFound.homeButton')}
-						</Button>
-					</div>
+					<h4 className='text-center ml-4 text-c-lm-gray-900 dark:text-c-dm-gray-100 font-semibold' style={{ fontSize: '1.75rem', lineHeight: '1.75rem' }}>wwWallet</h4>
 				</div>
+				
+				<h1 className="text-xl md:text-2xl text-center font-semibold leading-tight tracking-tight text-c-lm-gray-900 dark:text-c-dm-gray-100 mt-14">
+					{t('notFound.title')}
+				</h1>
+
+				<p className='text-md text-center text-c-lm-gray-700 dark:text-c-dm-gray-300 mt-4'>
+					{t('notFound.message')}
+				</p>
+
+				<Button
+					additionalClassName='mt-12'
+					id="navigate-home"
+					onClick={handleBackToHome}
+					variant="tertiary"
+					size='md'
+					textSize='md'
+				>
+					{t('notFound.homeButton')}
+				</Button>
 			</div>
 		</section>
 	);

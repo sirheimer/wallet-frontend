@@ -138,7 +138,7 @@
 	},
 	"notFound": {
 		"homeButton": "Back to Home",
-		"message": "Sorry, the page you're looking for cannot be accessed",
+		"message": "Sorry, the page you're looking for cannot be accessed.",
 		"title": "Oops, page not found!"
 	},
 	"pageAddCredentials": {
@@ -325,7 +325,7 @@
 		"description": "New Version is available!"
 	},
 	"welcomeModal": {
-		"description": "Discover the <strong> $t(common.walletName) </strong>, your ultimate tool for managing digital credentials. Effortlessly view, get, present and keep track of all your credentials!",
+		"description": "Discover <strong>$t(common.walletName)</strong>, your ultimate tool for managing digital credentials. Effortlessly view, get, present and keep track of all your credentials!",
 		"dismissButton": "Dismiss",
 		"question": "Are you ready to explore the features of $t(common.walletName) through a guided tour?",
 		"startTourButton": "Start Tour",

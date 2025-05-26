@@ -137,7 +137,7 @@
 	},
 	"notFound": {
 		"homeButton": "Voltar à página inicial",
-		"message": "Lamentamos, mas a página que procura não pode ser acedida",
+		"message": "Desculpe, a página que procura não pode ser acedida.",
 		"title": "Oops, página não encontrada!"
 	},
 	"pageAddCredentials": {
