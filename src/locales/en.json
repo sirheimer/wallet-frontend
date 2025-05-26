@@ -273,7 +273,7 @@
 			"closeTitle": "Click to close the PWA Installation Prompt",
 			"install": "Install"
 		},
-		"message": "PWA Available"
+		"message": "Install the app"
 	},
 	"qrCodeScanner": {
 		"cameraPermissionAllow": "Please allow camera permission to use the QR scanner.",

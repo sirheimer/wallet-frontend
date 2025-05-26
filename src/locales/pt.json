@@ -272,7 +272,7 @@
 			"closeTitle": "Clique para fechar a opção de instalação PWA",
 			"install": "Instalar"
 		},
-		"message": "PWA Disponível"
+		"message": "Instalar a aplicação"
 	},
 	"qrCodeScanner": {
 		"cameraPermissionAllow": "Por favor, ative a permissão da câmara para usar o digitalizador de código QR.",
